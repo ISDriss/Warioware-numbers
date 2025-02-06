@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Morse par clignotements avec calibration et indicateurs</title>
+    <!-- p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <!-- ml5.js -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      #canvasContainer {
+        display: inline-block;
+        position: relative;
+      }
+      #info {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      button {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Morse par clignotements avec calibration</h1>
+    <div id="canvasContainer"></div>
+    <div id="info">
+      <p id="morseDisplay">Code Morse en cours : </p>
+      <p id="wordDisplay">Mot en cours : </p>
+      <p id="validatedDisplay">Mots validés : </p>
+      <p id="digitDisplay">Chiffres validés : </p>
+      <p id="badWordsDisplay">Mauvais mots : </p>
+      <p id="message"></p>
+      <button id="validateBtn">Valider le mot</button>
+      <button id="toggleIndicators">Afficher indicateurs</button>
+      <div id="calibrationDiv">
+        <h3>Calibration</h3>
+        <button id="calibEyesClosed">Calibrer yeux plisser</button>
+        <button id="calibEyesOpen">Calibrer yeux ouverts</button>
+        <button id="calibMouthClosed">Calibrer bouche fermée</button>
+        <button id="calibMouthOpen">Calibrer bouche ouverte</button>
+        <button id="finishCalibration">Terminer calibration</button>
+        <p id="calibStatus">Calibration en cours...</p>
+      </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
