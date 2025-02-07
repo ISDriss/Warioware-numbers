@@ -85,17 +85,17 @@ async function predictAndDraw() {
 }
 
 function writeNumber(number) {
-    if(number == 'Neutral'){}
-    else{
-        number = number[6];
-        const numberElement = document.createElement('div');
-        numberElement.innerText = number;
-        document.body.appendChild(numberElement);
+    if (number !== 'Neutral') {
+        number = number[6]; //the class names are like "Class 1", "Class 2", etc. or Neutral
+        const numberElement = document.createElement('span');
+        numberElement.innerText = number + ' ';
+        document.getElementById('number-container').appendChild(numberElement);
     }
 }
 
 function resetPredictionHistory() {
     predictionHistory = {};
+    document.getElementById('number-container').innerHTML = '';
 }
 
 function drawPose(pose) {
