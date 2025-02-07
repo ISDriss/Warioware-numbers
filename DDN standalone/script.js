@@ -85,8 +85,8 @@ async function predictAndDraw() {
 }
 
 function writeNumber(number) {
-    if (number !== 'Neutral') {
-        number = number[6]; //the class names are like "Class 1", "Class 2", etc. or Neutral
+    if (number !== 'Neutre' || number !== 'undefined') {
+        number = number[6]; //the class names are like "Class 1", "Class 2", etc. or Neutre
         const numberElement = document.createElement('span');
         numberElement.innerText = number + ' ';
         document.getElementById('number-container').appendChild(numberElement);
