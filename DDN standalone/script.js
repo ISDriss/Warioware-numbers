@@ -35,7 +35,7 @@ async function init() {
 
 async function loop(timestamp) {
     webcam.update(); // update the webcam frame
-    await predict();
+    await predictAndDraw();
     window.requestAnimationFrame(loop);
 }
 
